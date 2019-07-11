@@ -136,7 +136,7 @@ class FaucetHub
                 'success' => true,
                 'message' => 'Payment sent to your address using FaucetHub.io',
                 'html' => '<div class="alert alert-success">' . htmlspecialchars($amount) . ' satoshi was sent to <a target="_blank" href="https://faucethub.io/balance/' . rawurlencode($to) . '">your account at FaucetHub.io</a>.</div>',
-                'html_coin' => '<div class="alert alert-success">' . htmlspecialchars(rtrim(rtrim(sprintf("%.8f", $amount/100000000), '0'), '.')) . ' '.$this->currency.' was sent to <a target="_blank" href="https://faucethub.io/balance/' . rawurlencode($to) . '">your account at FaucetHub.io</a>.</div>',
+                'html_coin' => '<div class="alert alert-success">' . htmlspecialchars(rtrim(rtrim(sprintf("%.25f", $amount/100000000000), '0'), '.')) . ' '.$this->currency.' was sent to <a target="_blank" href="https://faucethub.io/balance/' . rawurlencode($to) . '">your account at FaucetHub.io</a>.</div>',
                 'balance' => $r["balance"],
                 'balance_bitcoin' => $r["balance_bitcoin"],
                 'response' => json_encode($r)
